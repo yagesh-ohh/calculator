@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator .css">
+</head>
+<body>
+    <div id="cal_container">
+        <!-- <div class="inputValue"><input type="text" class="input"></div> -->
+        <div class="btn">
+            <input type="text" id="input">
+            <button onclick="del()">Del</button>
+            <button onclick="Clear()">C</button>
+            <button onclick="display('A++')">A++</button>
+            <button onclick="equal()">=</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('+')">+</button> 
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('-')">-</button>
+
+        </div>
+    </div>
+        <script>
+            // alert('dccc')
+            // count = 0
+           let input = document.getElementById('input')
+        //    let btn = document.
+
+           function display(num) {
+               
+            input.value +=num               
+           }
+           function equal() {
+               try{
+                   input.value=eval(input.value)
+               }catch(err)
+              { alert("enter correct values")}
+           }
+           function del() {
+               input.value = input.value.slice(0,-1)
+           }
+           function Clear() {
+               input.value = ""
+           }
+
+        </script>
+</body>
+</html>
+<!-- <table>
+            <tr>
+            <button onclick="('A')">A</button>
+            <button onclick="('A++')">A+</button>
+            <button onclick="('A++')">A++</button>
+            <button onclick="('=')">=</button>
+            </tr>
+            <tr>
+            <button onclick="('7')">7</button>
+            <button onclick="('8')">8</button>
+            <button onclick="('9')">9</button>
+            <button onclick="('/')">/</button>
+            </tr>
+           <tr>
+            <button onclick="('4')">4</button>
+            <button onclick="('5')">5</button>
+            <button onclick="('6')">6</button>
+            <button onclick="('+')">+</button>
+           </tr>
+            <tr>
+            <button onclick="('1')">1</button>
+            <button onclick="('2')">2</button>
+            <button onclick="('3')">3</button>
+            <button onclick="('-')">-</button>
+            </tr>
+           </table> -->
